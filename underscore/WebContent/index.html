@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>UnderScore Examples</title>
+<script type="text/javascript" src="jquery-1.6.min.js"></script>
+<script type="text/javascript" src="underscore.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var oldMap = [ 1, 2, 3, 5, 9, 2 ];
+		var newMap = _.map(oldMap, function(num) {
+			return num * 3;
+		});
+		
+
+		var sum = _.reduce(oldMap, function(memo, num) {
+			return memo + num;
+		}, 0);
+		
+		var max = _.max(oldMap, function(value){ return value; });
+		
+		$("#oldMap").text(oldMap.toString());
+		$("#newMap").text(newMap.toString());
+		
+		$("#oldMapSum").text(oldMap.toString());
+		$("#sum").text(sum);
+		
+		$("#oldMapMax").text(oldMap.toString());
+		$("#max").text(max);
+	
+	});
+</script> 
+
+</head>
+<body>
+
+	<h1>UnderScore Examples</h1>
+
+	<ul>
+		<li id="mapExample">
+			<div id="oldMap">Hallo</div>
+			<div id="newMap">Welt</div>
+	    </li>
+	    <li id="reduceExample">
+			<div id="oldMapSum">Hallo</div>
+			<div id="sum">Welt</div>
+	    </li>
+	     <li id="maxExample">
+			<div id="oldMapMax">Hallo</div>
+			<div id="max">Welt</div>
+	    </li>
+	</ul>
+
+</body>
+</html>
