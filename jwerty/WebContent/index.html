@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jwerty-Test</title>
+	<script type="text/javascript" src="jwerty.js"></script>
+	<script type="text/javascript" src="jquery-1.6.min.js"></script>
+ <script type="text/javascript">
+	  
+	  $(document).ready(function() {
+		  jwerty.key('ctrl+shift+d', function () { alert('print!') });
+		  $('#myInput').bind('keydown', jwerty.event('ctrl+v', function() { alert("copy"); return false; }));
+	   });
+	</script>
+</head>
+<body>
+	<h1 id="header">jwerty-Test</h1>
+	
+	<input id="myInput" width="100">
+	
+	<input id="myInput2" width="100">
+	
+</body>
+
+  
+    
+</html>
